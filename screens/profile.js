@@ -47,11 +47,12 @@ export default class ProfileScreen extends React.Component {
               size={30}
               color="black"
               onPress={this.props.navigation.openDrawer}
-              style={{ paddingLeft: 158 }}
+              //style={{ paddingLeft: 158 }}
             />
           </TouchableOpacity>
         </View>
 
+        <ScrollView style={{height:Dimensions.get('window').height-80, bottom:0,}}>
         <View>
           <ImageBackground
             source={require('../assets/kisspng-abstract-art-illustration-vector-abstract-background-5a85733e1675a8.765382561518695230092.png')}
@@ -72,10 +73,9 @@ export default class ProfileScreen extends React.Component {
           <Text style={styles.username}>Username</Text>
         </View>
 
-        <View style={{ height: 330, borderRadius: 5 }}>
-          <ScrollView
-            style={styles.scrollView}
-            contentContainerStyle={{ flexGrow: 1 }}>
+        <View style={{marginTop:30}}>
+          <View>
+
             <View>
               <Text style={styles.profileInfoTitle}>Name</Text>
             </View>
@@ -132,8 +132,9 @@ export default class ProfileScreen extends React.Component {
             <View style={styles.profileInfoContent}>
               <Text style={styles.profileInfoContentText}>15</Text>
             </View>
-          </ScrollView>
+          </View>
         </View>
+        </ScrollView>
       </View>
     );
   }
@@ -172,17 +173,18 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     color: '#434444',
+    marginBottom:10,
   },
   scrollView: {
-    marginTop: Dimensions.get('window').height * 0.08,
-    marginHorizontal: 15,
+    // marginTop: Dimensions.get('window').height * 0.08,
+    // marginHorizontal: 15,
     //marginBottom:15,
   },
   profileInfoTitle: {
     fontWeight: 'bold',
     color: '#2F9C86',
     fontSize: 15,
-    paddingLeft: 5,
+    paddingLeft: 15,
   },
   profileInfoContent: {
     height: 35,

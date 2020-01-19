@@ -238,7 +238,11 @@ export default class HomeScreen extends React.Component {
 
              <View style={{marginBottom:10}}>
              <ScrollView style={{height:250}}>
-               <Text style={{...styles.fieldTitle, marginHorizontal:20, marginTop:20}}>Describe Your Complaint</Text>
+             <View style={{flexDirection:'row', width:Dimensions.get('window').width-40,
+               alignSelf:'center', justifyContent:'space-between',}}>
+               <Text style={{...styles.fieldTitle, marginTop:20}}>Describe Your Complaint</Text>
+               <FontAwesome5 name='paperclip' size={18} color='gray' style={{marginTop:20, marginHoriontal:5}}/>
+            </View>
                <TextInput
                placeholder='Type your complaint in brief'
                placeholderTextColor='#D3D3D3'
@@ -436,7 +440,7 @@ const styles = StyleSheet.create({
     width:Dimensions.get('window').width,
     backgroundColor:'#FFFAFA',
     position:'absolute',
-    marginBottom:0,
+    bottom:0,
     //elevation:2,
     //transform:[{rotate:'180deg'}],
     shadowOpacity:1,
