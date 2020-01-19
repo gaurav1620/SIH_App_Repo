@@ -44,11 +44,22 @@ export default class CustomCard extends React.Component {
       <TouchableHighlight underlayColor="white" onPress={this.handlePress}>
         <Animated.View >
           <View style={styles.upperContainer}>
+          <View style={{flexDirection:'row'}}>
             <View style={styles.title}>
               <Text style={styles.text} numberOfLines={2} ellipsizeMode="tail">
                 Title Example
               </Text>
             </View>
+            <View style={styles.upvoteButtom}>
+              <FontAwesome5
+                name="ban"
+                size={30}
+                color="#D9381A"
+                style={{padding:2}}
+              />
+            </View>
+            </View>
+
 
             <View style={styles.categories}>
               <View style={{margin:1.5}}>
@@ -101,6 +112,7 @@ export default class CustomCard extends React.Component {
               </View>
             </View>
 
+
             <View style={styles.upvoteButtom}>
               <FontAwesome5
                 name="arrow-circle-up"
@@ -109,6 +121,7 @@ export default class CustomCard extends React.Component {
                 style={styles.upvoteButtomArrow}
               />
             </View>
+
           </View>
         </Animated.View>
       </TouchableHighlight>

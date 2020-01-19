@@ -21,9 +21,9 @@ export default class MyPostsScreen extends React.Component {
           }}
           onPress={this.props.navigation.openDrawer}>
           <FontAwesome5
-            name="chevron-circle-left"
+            name="chevron-left"
             size={30}
-            color="black"
+            color="#434444"
             onPress={props => {
               this.props.navigation.goBack();
             }}
@@ -31,9 +31,9 @@ export default class MyPostsScreen extends React.Component {
           <Text style={styles.headerofEachScreen}>My Posts</Text>
 
           <FontAwesome5
-            name="bars"
+            name="ellipsis-v"
             size={30}
-            color="black"
+            color="#434444"
             onPress={this.props.navigation.openDrawer}
 
           />
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   headerofEachScreen: {
     padding: 2.5,
     fontSize: 20,
-    color: 'black',
+    color: '#434444',
     fontWeight: 'bold',
   },
 });

@@ -25,9 +25,9 @@ export default class StatisticsScreen extends React.Component {
           }}
           onPress={this.props.navigation.openDrawer}>
           <FontAwesome5
-            name="chevron-circle-left"
+            name="chevron-left"
             size={30}
-            color="black"
+            color="#434444"
             onPress={props => {
               this.props.navigation.goBack();
             }}
@@ -35,11 +35,10 @@ export default class StatisticsScreen extends React.Component {
           <Text style={styles.headerofEachScreen}>Statistics</Text>
 
           <FontAwesome5
-            name="bars"
-            size={30}
-            color="black"
+            name="ellipsis-v"
+            size={25}
+            color="#434444"
             onPress={this.props.navigation.openDrawer}
-            style={{ paddingLeft: 160 }}
           />
         </TouchableOpacity>
       </View>
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
   headerofEachScreen: {
     padding: 2.5,
     fontSize: 20,
-    color: 'black',
+    color: '#434444',
     fontWeight: 'bold',
   },
 });

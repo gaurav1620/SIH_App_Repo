@@ -94,11 +94,12 @@ const DrawerNavigator = createDrawerNavigator(
         marginHoriontal: 8,
       },
     },
+
   }
 );
 
 // export drawer
-export default createAppContainer(DrawerNavigator);  
+export default createAppContainer(DrawerNavigator);
 
 // BOTTOM SIDE TAB
 

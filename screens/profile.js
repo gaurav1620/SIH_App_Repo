@@ -32,9 +32,9 @@ export default class ProfileScreen extends React.Component {
             onPress={this.props.navigation.openDrawer}>
 
             <FontAwesome5
-              name="chevron-circle-left"
+              name="chevron-left"
               size={30}
-              color="black"
+              color="#454545"
               onPress={props => {
                 this.props.navigation.goBack();
               }}
@@ -43,9 +43,9 @@ export default class ProfileScreen extends React.Component {
 
 
             <FontAwesome5
-              name="bars"
-              size={30}
-              color="black"
+              name="ellipsis-v"
+              size={25}
+              color="#454545"
               onPress={this.props.navigation.openDrawer}
               //style={{ paddingLeft: 158 }}
             />
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   headerofEachScreen: {
     padding: 3,
     fontSize: 20,
-    color: 'black',
+    color: '#434444',
     fontWeight: 'bold',
   },
   backgroundimg: {

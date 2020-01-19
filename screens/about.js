@@ -16,23 +16,39 @@ import Constants from 'expo-constants';
 const CONTENT = [
   {
     title: 'How to view the complaints posted by myself?',
-    content: 'hey',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
-    title: 'Second',
-    content: 'hi',
+    title: 'How to I report any complaint as spam?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
-    title: 'Third',
-    content: 'ok',
+    title: 'How do I update my profile?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
-    title: 'Fourth',
-    content: 'okay',
+    title: 'Who will my complaint be forwarded to?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
   {
-    title: 'Fifth',
-    content: 'hello',
+    title: 'How many upvotes does my complaint need to be prioritized?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    title: 'Can I attach any media to my complaint?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    title: 'What categories are available to post compalints?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    title: 'How do I view the statistics?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+  {
+    title: 'Who do I contact for more information?',
+    content :'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
 
@@ -56,7 +72,7 @@ export default class AboutScreen extends React.Component {
   renderHeader = (section, _, isActive) => {
     return (
       <Animatable.View
-        duration={300}
+        duration={400}
         style={[styles.header, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <Text style={styles.headerText}>{section.title}</Text>
@@ -73,7 +89,7 @@ export default class AboutScreen extends React.Component {
   renderContent(section, _, isActive) {
     return (
       <Animatable.View
-        duration={400}
+        duration={100}
         style={[styles.content, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <Animatable.Text
@@ -105,9 +121,9 @@ export default class AboutScreen extends React.Component {
             }}
             onPress={this.props.navigation.openDrawer}>
             <FontAwesome5
-              name="chevron-circle-left"
+              name="chevron-left"
               size={30}
-              color="black"
+              color="#434444"
               onPress={props => {
                 this.props.navigation.goBack();
               }}
@@ -115,9 +131,9 @@ export default class AboutScreen extends React.Component {
             <Text style={styles.headerofEachScreen}>About</Text>
 
             <FontAwesome5
-              name="bars"
-              size={30}
-              color="black"
+              name="ellipsis-v"
+              size={25}
+              color="#434444"
               onPress={this.props.navigation.openDrawer}
 
             />
@@ -147,7 +163,7 @@ const styles = StyleSheet.create({
   headerofEachScreen: {
     padding: 3,
     fontSize: 20,
-    color: 'black',
+    color: '#434444',
     fontWeight: 'bold',
   },
   container: {
@@ -202,7 +218,6 @@ const styles = StyleSheet.create({
   },
   info: {
     color: 'gray',
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingHorizontal:15,
   },
 });

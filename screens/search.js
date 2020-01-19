@@ -34,9 +34,9 @@ export default class SearchScreen extends React.Component {
             }}
             onPress={this.props.navigation.openDrawer}>
             <FontAwesome5
-              name="chevron-circle-left"
+              name="chevron-left"
               size={30}
-              color="black"
+              color="#434444"
               onPress={props => {
                 this.props.navigation.goBack();
               }}
@@ -44,9 +44,9 @@ export default class SearchScreen extends React.Component {
             <Text style={styles.headerofEachScreen}>Search</Text>
 
             <FontAwesome5
-              name="bars"
-              size={30}
-              color="black"
+              name="ellipsis-v"
+              size={32}
+              color="#434444"
               onPress={this.props.navigation.openDrawer}
             />
           </TouchableOpacity>
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   headerofEachScreen: {
     padding: 2.5,
     fontSize: 20,
-    color: 'black',
+    color: '#434444',
     fontWeight: 'bold',
   },
   searchBox: {

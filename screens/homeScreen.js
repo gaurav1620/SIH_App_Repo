@@ -164,6 +164,7 @@ export default class HomeScreen extends React.Component {
       inputRange:[0,1],
       outputRange:[-50,-100]
     });
+    const { navigate } = this.props.navigation;
 
 
     return (
@@ -298,11 +299,12 @@ export default class HomeScreen extends React.Component {
             elevation:4,
             zIndex:1,
           }}>
-          <Feather name="bar-chart-2" size={22} style={styles.tabIcon} color='gray' onPress={()=>{this.props.navigation.navigate('./statistics.js')}}/>
-          <Feather name="search" size={22} style={styles.tabIcon } color='gray' />
+
+          <Feather name="bar-chart-2" size={25} style= {styles.tabIcon} color='#218C74' onPress={()=>{this.props.navigation.navigate('Statistics')}} />
+          <Feather name="search" size={25} style={styles.tabIcon } color='#218C74' onPress={()=>{ this.props.navigation.navigate('Search')}} />
           <Feather size={0} />
-          <Feather name="bookmark" size={22} style={styles.tabIcon} color='gray' />
-          <Feather name="user" size={22} style={styles.tabIcon} color='gray' />
+          <Feather name="bookmark" size={25} style={styles.tabIcon} color='#218C74' onPress={()=>{this.props.navigation.navigate('MyPosts')}} />
+          <Feather name="user" size={25} style={styles.tabIcon} color='#218C74' onPress={()=>{this.props.navigation.navigate('Profile')}} />
         </View>
 
         <View
@@ -454,7 +456,7 @@ const styles = StyleSheet.create({
     width:50,
     alignSelf:'center',
     margin:10,
-    top:20,
+    top:0,
   //  position:'absolute',
     shadowOffset:{width:5, height:5},
     shadowColor:'black',
